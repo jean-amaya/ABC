@@ -13,7 +13,7 @@ import streamlit as st
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="Proyecto Python Fundamentals",
-    page_icon="📊",
+    page_icon="🧩",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -232,41 +232,40 @@ def _e4_delete(idx: int) -> None:
 # -----------------------------------------------------------------------------
 def render_home() -> None:
     page_header(
-        "Proyecto Python Fundamentals",
-        "Aplicación en Streamlit que integra los fundamentos de programación del Módulo 1.",
+        "Proyecto Python Fundamentals"        
     )
 
     card_open()
     col_a, col_b = st.columns([1.4, 1])
 
     with col_a:
-        st.write("**Autor:** Jeancarlos Amaya Quispe")
-        st.write("**Curso / Módulo:** Especialización Python for Analytics – Módulo 1 (Python Fundamentals)")
-        st.write("**Año:** 2026")
+        st.write("**✨ Autor:** Jeancarlos Amaya Quispe")
+        st.write("**✨ Módulo:** Especialización Python for Analytics – Módulo 1 (Python Fundamentals)")
+        st.write("**✨ Año:** 2026")
         st.write(
             "**Objetivo:** desarrollar una aplicación interactiva en Streamlit integrando variables, "
             "estructuras de datos, control de flujo, funciones, programación funcional y POO."
         )
 
     with col_b:
-        st.markdown("**Tecnologías utilizadas**")
+        st.markdown("**✨ Tecnologías utilizadas**")
         st.markdown("<span class='dmc-chip'>Python</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>Streamlit</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>Pandas</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>NumPy</span>", unsafe_allow_html=True)
 
     st.markdown("<div class='dmc-divider'></div>", unsafe_allow_html=True)
-    st.subheader("📚 Módulos del proyecto")
+    st.subheader("✨ Módulos")
     c1, c2 = st.columns(2)
     with c1:
-        st.info("📘 Ejercicio 1 – Variables y Condicionales")
-        st.info("📘 Ejercicio 2 – Listas y Diccionarios")
+        st.info("📝 Variables y Condicionales")
+        st.info("📝 Listas y Diccionarios")
     with c2:
-        st.info("📘 Ejercicio 3 – Funciones y Programación Funcional")
-        st.info("📘 Ejercicio 4 – Programación Orientada a Objetos (POO)")
+        st.info("📝 Funciones y Programación Funcional")
+        st.info("📝 Programación Orientada a Objetos")
     card_close()
 
-    st.caption("Use el menú lateral para navegar entre módulos.")
+    st.caption("ESPECIALIZACION IMPARTIDA POR DMC")
 
 
 # -----------------------------------------------------------------------------
@@ -338,7 +337,7 @@ def render_ejercicio_1() -> None:
 # Ejercicio 2 – Listas y Diccionarios
 # -----------------------------------------------------------------------------
 def render_ejercicio_2() -> None:
-    page_header("📘 Ejercicio 2", "Listas y Diccionarios – Registro de actividades financieras")
+    page_header("📝 Ejercicio 2", "Listas y Diccionarios – Registro de actividades financieras")
 
     if st.session_state.pop("e2_notice", None) == "cleared":
         st.success("Actividades del Ejercicio 2 eliminadas.")
@@ -455,7 +454,7 @@ def render_ejercicio_2() -> None:
 # -----------------------------------------------------------------------------
 def render_ejercicio_3() -> None:
     page_header(
-        "📘 Ejercicio 3",
+        "📝 Ejercicio 3",
         "Funciones y Programación Funcional – Retorno esperado (map + lambda)",
     )
 
@@ -568,7 +567,7 @@ class Actividad:
 
 def render_ejercicio_4() -> None:
     page_header(
-        "📘 Ejercicio 4",
+        "📝 Ejercicio 4",
         "Programación Orientada a Objetos (POO) – Clase Actividad con métodos",
     )
 
@@ -651,20 +650,20 @@ def main() -> None:
 
     pagina = st.sidebar.selectbox(
         "Selecciona una página",
-        ["🏠 Home", "📘 Ejercicio 1", "📘 Ejercicio 2", "📘 Ejercicio 3", "📘 Ejercicio 4"],
+        ["🏠 Home", "📝 Ejercicio 1", "📝 Ejercicio 2", "📝 Ejercicio 3", "📝 Ejercicio 4"],
     )
     st.sidebar.divider()
     st.sidebar.caption("Autor: Jeancarlos Amaya Quispe")
 
     if pagina == "🏠 Home":
         render_home()
-    elif pagina == "📘 Ejercicio 1":
+    elif pagina == "📝 Ejercicio 1":
         render_ejercicio_1()
-    elif pagina == "📘 Ejercicio 2":
+    elif pagina == "📝 Ejercicio 2":
         render_ejercicio_2()
-    elif pagina == "📘 Ejercicio 3":
+    elif pagina == "📝 Ejercicio 3":
         render_ejercicio_3()
-    elif pagina == "📘 Ejercicio 4":
+    elif pagina == "📝 Ejercicio 4":
         render_ejercicio_4()
 
 
