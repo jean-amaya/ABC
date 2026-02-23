@@ -13,7 +13,7 @@ import streamlit as st
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="Proyecto Python Fundamentals",
-    page_icon="🧩",
+    page_icon="✅",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -243,9 +243,8 @@ def render_home() -> None:
         st.write("**✨ Módulo:** Especialización Python for Analytics – Módulo 1 (Python Fundamentals)")
         st.write("**✨ Año:** 2026")
         st.write(
-            "**Objetivo:** desarrollar una aplicación interactiva en Streamlit integrando variables, "
-            "estructuras de datos, control de flujo, funciones, programación funcional y POO."
-        )
+            "**✨ Objetivo:** Desarrollar una aplicación que ponga en practica lo aprendido en el modulo 1"
+            )
 
     with col_b:
         st.markdown("**📌Tecnologías utilizadas**")
