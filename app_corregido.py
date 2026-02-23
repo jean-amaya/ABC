@@ -1,22 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Proyecto Aplicado en Streamlit – Python Fundamentals (Módulo 1)
-
-Autor : Jeancarlos Amaya Quispe
-Curso : Especialización Python for Analytics – Módulo 1 (Python Fundamentals)
-Año   : 2026
-
-Descripción:
-Aplicación desarrollada en Streamlit que integra conceptos fundamentales de programación:
-variables, condicionales, estructuras de datos, control de flujo, funciones, programación
-funcional (map / lambda) y Programación Orientada a Objetos (POO).
-
-Notas de diseño:
-- Navegación mediante menú lateral con st.sidebar.selectbox().
-- Cada ejercicio es un módulo independiente (variables y estados separados).
-- Estilo UI corporativo (tarjetas, tipografía, sidebar y botones).
-"""
-
 from __future__ import annotations
 
 from dataclasses import dataclass
