@@ -178,7 +178,7 @@ def card_close() -> None:
 
 
 # -----------------------------------------------------------------------------
-# Estados por módulo (independientes)
+# Estados por módulo 
 # -----------------------------------------------------------------------------
 def ensure_state() -> None:
     # Ejercicio 1
@@ -197,7 +197,7 @@ def ensure_state() -> None:
 
 
 # -----------------------------------------------------------------------------
-# Callbacks (evitan st.rerun y mantienen el DOM estable en Streamlit Cloud)
+# Callbacks 
 # -----------------------------------------------------------------------------
 def _e1_reset() -> None:
     """Restablece valores del Ejercicio 1 antes del rerun automático."""
@@ -232,7 +232,7 @@ def _e4_delete(idx: int) -> None:
 # -----------------------------------------------------------------------------
 def render_home() -> None:
     page_header(
-        "Proyecto Python Fundamentals"        
+        "Proyecto Python Fundamentals"
     )
 
     card_open()
@@ -248,21 +248,21 @@ def render_home() -> None:
         )
 
     with col_b:
-        st.markdown("**✨ Tecnologías utilizadas**")
+        st.markdown("**📌Tecnologías utilizadas**")
         st.markdown("<span class='dmc-chip'>Python</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>Streamlit</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>Pandas</span>", unsafe_allow_html=True)
         st.markdown("<span class='dmc-chip'>NumPy</span>", unsafe_allow_html=True)
 
     st.markdown("<div class='dmc-divider'></div>", unsafe_allow_html=True)
-    st.subheader("✨ Módulos")
+    st.subheader("📌Módulos")
     c1, c2 = st.columns(2)
     with c1:
-        st.info("📝 Variables y Condicionales")
-        st.info("📝 Listas y Diccionarios")
+        st.info("📋 Variables y Condicionales")
+        st.info("📋 Listas y Diccionarios")
     with c2:
-        st.info("📝 Funciones y Programación Funcional")
-        st.info("📝 Programación Orientada a Objetos")
+        st.info("📋 Funciones y Programación Funcional")
+        st.info("📋 Programación Orientada a Objetos")
     card_close()
 
     st.caption("ESPECIALIZACION IMPARTIDA POR DMC")
@@ -342,7 +342,7 @@ def render_ejercicio_2() -> None:
     if st.session_state.pop("e2_notice", None) == "cleared":
         st.success("Actividades del Ejercicio 2 eliminadas.")
 
-    card_open("🧾 Registro de Actividades Financieras (lista de diccionarios)")
+    card_open(" Registro de Actividades Financieras (lista de diccionarios)")
     with st.form("e2_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
         with col1:
@@ -381,7 +381,7 @@ def render_ejercicio_2() -> None:
 
     card_close()
 
-    # Visualización y evaluación (bucle + condicional)
+    # bucle + condicional
     actividades: List[Dict] = st.session_state["e2_actividades"]
     if not actividades:
         st.info("ℹ️ No hay actividades registradas. Agregue una actividad con el formulario superior.")
@@ -400,7 +400,7 @@ def render_ejercicio_2() -> None:
         hide_index=True,
     )
 
-    st.subheader("🔎 Evaluación por actividad")
+    st.subheader(" Evaluación por actividad")
     for i, act in enumerate(actividades, start=1):
         nombre = act["nombre"]
         tipo = act["tipo"]
@@ -467,7 +467,7 @@ def render_ejercicio_3() -> None:
         """Retorno = presupuesto × tasa × meses"""
         return float(presupuesto) * float(tasa) * int(meses)
 
-    card_open("📈 Registro de actividades para retorno esperado")
+    card_open(" Registro de actividades para retorno esperado")
     with st.form("e3_form", clear_on_submit=True):
         col1, col2 = st.columns([1.2, 1])
         with col1:
@@ -568,13 +568,13 @@ class Actividad:
 def render_ejercicio_4() -> None:
     page_header(
         "📝 Ejercicio 4",
-        "Programación Orientada a Objetos (POO) – Clase Actividad con métodos",
+        "Programación Orientada a Objetos ",
     )
 
     if st.session_state.pop("e4_notice", None) == "deleted":
         st.success("Objeto eliminado.")
 
-    card_open("🧩 Registro de actividades como objetos (POO)")
+    card_open(" Registro de actividades como objetos ")
     with st.form("e4_form", clear_on_submit=True):
         nombre = st.text_input("Nombre", value="")
         tipo = st.selectbox(
